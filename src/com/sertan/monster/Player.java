@@ -1,59 +1,32 @@
 package com.sertan.monster;
 
+import static com.sertan.monster.PrintUtils.printStatus;
+
 public class Player {
     private String name;
-    private int strength;
-    private int intelligence;
-    private int agility;
     private int health;
-    private int experience;
-    private int level;
-    private int baseDamage;
+    private int damage;
+    private int level = 1;
 
-    public Player(int strength, int intelligence, int agility, int health, int level, int baseDamage) {
-        this.strength = strength;
-        this.intelligence = intelligence;
-        this.agility = agility;
+    public Player(int health, int damage) {
         this.health = health;
-        this.level = level;
-        this.baseDamage = baseDamage;
+        this.damage = damage;
     }
 
     public void takeDamage(int damage) {
-
+        if (damage > getHealth()) {
+            setHealth(0);
+        } else {
         setHealth( getHealth() - damage );
-
+        }
     }
 
-    public void calculateExperienceToLevel(int amountOfExp) {
-
-        for (int i = amountOfExp; i > 0; i--) {
-            setExperience( getExperience() + 1);
-
-            // Level Up at 100
-            if (getExperience() == 100) {
-                setLevel(getLevel() + 1);
-                setExperience(0);
-            }
-        }
-
-        System.out.println("HOW MUCH EXP DOES PLAYER HAVE?");
-        System.out.println(getExperience());
-
-        System.out.println("PLAYER LEVEL?");
-        System.out.println(getLevel());
-
+    public boolean isDead() {
+        return this.health == 0;
     }
 
     public void getStatus() {
-        System.out.printf("Name: %s %n", name);
-        System.out.printf("Strength: %d %n", strength);
-        System.out.printf("Intelligence: %d %n", intelligence);
-        System.out.printf("Agility: %d %n", agility);
-        System.out.printf("Health: %d %n", health);
-        System.out.printf("Experience: %d %n", experience);
-        System.out.printf("Level: %d %n", level);
-        System.out.printf("BaseDamage: %d %n", baseDamage);
+        printStatus(this.health, this.damage);
     }
 
     public String getName() {
@@ -64,30 +37,6 @@ public class Player {
         this.name = name;
     }
 
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public int getIntelligence() {
-        return intelligence;
-    }
-
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
-    }
-
-    public int getAgility() {
-        return agility;
-    }
-
-    public void setAgility(int agility) {
-        this.agility = agility;
-    }
-
     public int getHealth() {
         return health;
     }
@@ -96,12 +45,12 @@ public class Player {
         this.health = health;
     }
 
-    public int getExperience() {
-        return experience;
+    public int getDamage() {
+        return damage;
     }
 
-    public void setExperience(int experience) {
-        this.experience = experience;
+    public void setDamage(int damage) {
+        this.damage = damage;
     }
 
     public int getLevel() {
@@ -109,14 +58,9 @@ public class Player {
     }
 
     public void setLevel(int level) {
+        setHealth(this.health + 10);
+        setDamage(this.damage + 1);
         this.level = level;
     }
 
-    public int getBaseDamage() {
-        return baseDamage;
-    }
-
-    public void setBaseDamage(int baseDamage) {
-        this.baseDamage = baseDamage;
-    }
 }

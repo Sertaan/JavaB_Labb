@@ -1,9 +1,8 @@
 package com.sertan.monster;
 
 import java.util.Scanner;
-
-import static com.sertan.monster.Colors.GREEN;
-import static com.sertan.monster.Colors.RESET;
+import static com.sertan.monster.Colors.*;
+import static com.sertan.monster.PrintUtils.*;
 
 public class Main {
 
@@ -13,90 +12,65 @@ public class Main {
     public static void main(String[] args) {
 
         // Instantiate Objects
-        Player player = new Player(
-                5,
-                5,
-                5,
-                50,
-                1,
-                5
-        );
-
-        // Testing task #2
-        System.out.println(player.getStrength());
-        System.out.println(player.getIntelligence());
-        System.out.println(player.getAgility());
-
-        // Setters?
-        player.setStrength(10);
-        player.setIntelligence(10);
-        player.setAgility(10);
-
-        System.out.println(player.getStrength());
-        System.out.println(player.getIntelligence());
-        System.out.println(player.getAgility());
-
-        // Health
-        player.setHealth(player.getHealth() - 5 );
-        // result = health - 5
+        Player player = new Player(100, 20);
 
         // Welcome our Player
-        System.out.println(GREEN + "Welcome Adventurer" + RESET);
+        System.out.println(GREEN + "Welcome to the Jungle" + RESET);
         System.out.println("What is your name?");
         player.setName( sc.nextLine() );
         System.out.println("Ah.. your name is: " + player.getName());
 
         // Menu
         do {
-            System.out.println("""
-                    1. Fight
-                    2. Status
-                    3. Exit Game
-                    0. Debug Experience
-                    """);
+            printMainMenu();
             switch (sc.nextLine()) {
                 case "1" -> fightMenu(player);
                 case "2" -> player.getStatus();
                 case "3" -> System.exit(0);
-
-
                 default -> System.out.println("Try again!");
             }
-        } while (true);
+        } while (!player.isDead());
+
+        if (player.isDead()) {
+            printGameOver();
+            System.exit(0);
+        }
+
     }
 
     public static void fightMenu(Player player) {
-
-        Monster monster = new Monster(5,20,5);
-
+        Monster monster = new Monster(player.getLevel());
         // Fight Menu
         do {
-
-            System.out.println("-- -- Monster approaching -- --");
-            System.out.println("Monster: " + monster.getHealth());
-
-            System.out.println("""
-                    1. Battle
-                    2. Status
-                    3. Flee
-                    """);
+            printNewMonster(monster, player.getLevel());
+            printFightMenu();
 
             switch (sc.nextLine()) {
                 case "1" -> battle(player, monster);
                 case "2" -> player.getStatus();
-
+                case "3" -> monster = new Monster();
                 default -> System.out.println("Try again");
             }
-        } while (true);
+        } while (!(monster.isDead() || player.isDead()));
 
     }
 
     public static void battle(Player player, Monster monster) {
-        System.out.println("Inside Battle");
+        player.takeDamage(monster.getDamage());
+        monster.takeDamage(player.getDamage());
 
-        player.takeDamage(5);
-        monster.takeDamage(5);
+        printBattleResult(player, monster);
 
+        if(player.isDead() && monster.isDead()) {
+            System.out.println("båda är döda");
+        }
+        else if(monster.isDead()) {
+            System.out.println("monster är död");
+            player.setLevel(player.getLevel() + 1);
+        }
+        else if(player.isDead()) {
+            System.out.println("Du är död");
+        }
     }
 
 
