@@ -26,6 +26,11 @@ public class Monster implements Combat {
         this.damage = ThreadLocalRandom.current().nextInt(MINUMUM_DAMAGE, MAXIMUM_DAMAGE + 1 + level);
     }
 
+    public Monster(int level, int health, int damage) {
+        this.health = health + level;
+        this.damage = damage + level;
+    }
+
     @Override
     public void takeDamage(int damage) {
         if (damage > getHealth()) {

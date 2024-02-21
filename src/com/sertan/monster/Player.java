@@ -13,6 +13,12 @@ public class Player implements Combat {
         this.damage = damage;
     }
 
+    public Player(String name, int health, int damage) {
+        this.name = name;
+        this.health = health;
+        this.damage = damage;
+    }
+
     @Override
     public void takeDamage(int damage) {
         if (damage > getHealth()) {
