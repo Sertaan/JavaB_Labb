@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import static com.sertan.monster.PrintUtils.printStatus;
 
-public class Monster {
+public class Monster implements Combat {
     // Health
     private static final int MINUMUM_HEALTH = 5;
     private static final int MAXIMUM_HEALTH = 20;
@@ -26,7 +26,7 @@ public class Monster {
         this.damage = ThreadLocalRandom.current().nextInt(MINUMUM_DAMAGE, MAXIMUM_DAMAGE + 1 + level);
     }
 
-
+    @Override
     public void takeDamage(int damage) {
         if (damage > getHealth()) {
             setHealth(0);
@@ -35,10 +35,12 @@ public class Monster {
         }
     }
 
+    @Override
     public boolean isDead() {
         return this.health == 0;
     }
 
+    @Override
     public void getStatus() {
         printStatus(this.health, this.damage);
     }

@@ -9,6 +9,13 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
 
 
+// TODO 1: Interface för 'combat' som skall implementeras för tillämpning av abstrahering för att öva på polymorfism!
+// TODO 2: Enhets tester!
+        // TODO test1 - Test som kollar: - Kolla om spelaren kan gå upp i ‘Level’
+        // TODO test2 - Test som kollar: - Kolla om spelaren kan ‘förlora’
+        // TODO test3 - Test som kollar: - Kolla om skadan är lika mycket som spelaren KAN skada
+
+
     public static void main(String[] args) {
 
         // Instantiate Objects

@@ -2,7 +2,7 @@ package com.sertan.monster;
 
 import static com.sertan.monster.PrintUtils.printStatus;
 
-public class Player {
+public class Player implements Combat {
     private String name;
     private int health;
     private int damage;
@@ -13,18 +13,21 @@ public class Player {
         this.damage = damage;
     }
 
+    @Override
     public void takeDamage(int damage) {
         if (damage > getHealth()) {
             setHealth(0);
         } else {
-        setHealth( getHealth() - damage );
+            setHealth( getHealth() - damage );
         }
     }
 
+    @Override
     public boolean isDead() {
         return this.health == 0;
     }
 
+    @Override
     public void getStatus() {
         printStatus(this.health, this.damage);
     }

@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fc12848e-8190-44ed-9e02-f30413a05ec6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sertan/monster/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sertan/monster/Main.java" afterDir="false" />
-    </list>
-    <list id="5980f097-a471-4faf-b287-2812bf47c1be" name="Changes by jonasmalik" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/sertan/monster/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sertan/monster/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sertan/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sertan/monster/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sertan/monster/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sertan/monster/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sertan/monster/PrintLineVariations.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +22,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Sertaan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Sertaan&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -42,25 +35,6 @@
         <option name="url" value="https://github.com/Sertaan/JavaB_Labb.git" />
       </UrlAndAccount>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/com/sertan/monster/Main.java">
-      <ranges>
-        <range start1="3" end1="6" start2="3" end2="5" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="15" end1="41" start2="14" end2="15" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="43" end1="44" start2="17" end2="18" changelist="fc12848e-8190-44ed-9e02-f30413a05ec6" />
-        <range start1="50" end1="56" start2="24" end2="25" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="60" end1="62" start2="29" end2="29" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="64" end1="65" start2="31" end2="38" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="68" end1="71" start2="41" end2="42" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="73" end1="82" start2="44" end2="46" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="86" end1="87" start2="50" end2="51" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="89" end1="90" start2="53" end2="54" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="94" end1="95" start2="58" end2="60" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="96" end1="98" start2="61" end2="62" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-        <range start1="99" end1="99" start2="63" end2="73" changelist="5980f097-a471-4faf-b287-2812bf47c1be" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -71,22 +45,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Sertan/IdeaProjects/tmp/Monster",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Sertan/IdeaProjects/tmp/Monster&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sertan.monster.Main" />
@@ -116,7 +95,10 @@
       <option name="presentableId" value="Default" />
       <updated>1707261071158</updated>
       <workItem from="1707261072115" duration="8154000" />
-      <workItem from="1707459966749" duration="18099000" />
+      <workItem from="1707459966749" duration="22628000" />
+      <workItem from="1707992173462" duration="5252000" />
+      <workItem from="1708426221138" duration="1380000" />
+      <workItem from="1708539476280" duration="697000" />
     </task>
     <servers />
   </component>
